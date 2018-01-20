@@ -9,3 +9,4 @@ class Block
         this.hash = hash.toString();
     }
 }
+//To keep things as simple as possible i have included only the most necessary: index, timestamp, data, hash and previous hash.
