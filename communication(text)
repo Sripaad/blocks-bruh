@@ -1,0 +1,7 @@
+An essential part of a node is to share and sync the blockchain with other nodes. 
+The following rules are used to keep the network in sync.
+
+    When a node generates a new block, it broadcasts it to the network
+    When a node connects to a new peer it querys for the latest block
+    When a node encounters a block that has an index larger than the current known block, it either adds the block the its current chain 
+    or querys for the full blockchain.
