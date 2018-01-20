@@ -1,0 +1,16 @@
+var replaceChain = (newBlocks) => 
+{
+    if (isValidChain(newBlocks) && newBlocks.length > blockchain.length) 
+    {
+        console.log('Received blockchain is valid. Replacing current blockchain with received blockchain');
+        blockchain = newBlocks;
+        broadcast(responseLatestMsg());
+    } 
+    else 
+    {
+        console.log('Received blockchain invalid');
+    }
+};
+
+//There should always be only one explicit set of blocks in the chain at a given time.
+//In case of conflicts (e.g. two nodes both generate block number 72) we choose the chain that has the longest number of blocks.
